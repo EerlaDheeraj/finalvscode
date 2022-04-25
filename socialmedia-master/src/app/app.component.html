@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-6">
+        <div class="card-body">
+          <h2 class="card-title text-top-left text-white py-3" >{{ title }}</h2>
+          <ul class="text-center list-inline py-3">
+            <!-- <li class="list-inline-item">
+              <a routerLink="/users" name="content" id="content" >Dashboard</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="list-inline-item">
+              <a routerLink="/adduser" name="content1" id="content1">Create a Post</a>
+                </li> -->
+                <div id="content1">
+                  <a style="color: aliceblue;" routerLink="/users"  >Dashboard</a>
+                </div>
+                
+            <!-- <li class="list-inline-item">
+              <a routerLink="/createpost"  >Create a Post</a>
+                </li> -->
+                <div id="content">
+                  <a style="color: aliceblue;" routerLink="/adduser"  >Create a Post</a></div>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

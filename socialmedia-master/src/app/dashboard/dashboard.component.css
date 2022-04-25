@@ -1,0 +1,30 @@
+mat-card{
+    width: 110%;
+    height: 90%;
+}
+#title{
+    font-size:200%;
+}
+#description{
+    font-size:120%;
+}
+#voting{
+   width:30px;
+   height:40px;
+}
+#upvote{
+   /* width:30px;
+   height: 20px;
+   cursor: pointer; */
+   margin-right: 18px;
+}
+#downvote{
+   width:30px;
+   height: 20px;
+   /* background: url('downvote.jpg') 0 0 no-repeat; */
+   cursor: pointer;
+}
+/* #submit{
+    width: 20%;
+    height: 50%;
+} */

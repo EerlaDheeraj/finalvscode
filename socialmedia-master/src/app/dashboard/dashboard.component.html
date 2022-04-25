@@ -1,0 +1,56 @@
+<!-- <div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">title</th>
+          <th scope="col">Description</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.title }}</td>
+          <td><a href="mailto:{{ user.link }}">{{ user.link }}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%">
+     <mat-grid-list cols="3" rowHeight="100px">
+     <mat-grid-tile *ngFor="let user of users"
+                    [colspan]="2"
+                    [rowspan]="2">
+                    <div>
+                      <mat-card-subtitle id="upvote"><a href="#">Up vote</a></mat-card-subtitle>
+                      <mat-card-subtitle id="downvote"><a href="#">Down vote</a></mat-card-subtitle>
+                  </div>
+      <mat-card  >
+        <mat-card-header>
+          <mat-card-subtitle>#{{user.id}}</mat-card-subtitle>
+          <mat-card-title id="title">{{user.title}}</mat-card-title>
+          <mat-card-subtitle id="description" >{{user.link}}</mat-card-subtitle>
+          <br>
+          <br>
+          <br>
+          <br>
+          <mat-card-subtitle > <a href="#">Comment</a></mat-card-subtitle>
+          
+            <!-- <div class="btn btn-primary"  ><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+            <div class="btn btn-danger"><i class="fa fa-chevron-down" aria-hidden="true"></i></div> -->
+<!--             
+            <br>
+            <br>
+            <br> -->
+           
+        </mat-card-header>
+                  
+      </mat-card>
+       </mat-grid-tile> 
+      </mat-grid-list> 
+  </div>
+</div>

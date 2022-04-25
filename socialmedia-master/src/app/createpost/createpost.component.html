@@ -1,0 +1,64 @@
+<!-- <div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" >
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text"  
+            class="form-control" 
+            id="title" 
+            name="title" 
+            placeholder="Enter Title"
+            required>
+        </div>
+        <div [hidden] class="alert alert-danger">Name is required</div>
+        <div class="form-group">
+          <label for="link">Link</label>
+          <input type="text"  
+            class="form-control" 
+            id="link" 
+            name="link" 
+            placeholder="Enter Link"
+            required >
+          <div [hidden] class="alert alert-danger">Email is required</div>
+        </div>
+        <button type="save" [disabled]
+          class="btn btn-info">Save Draft</button>
+          &nbsp;&nbsp;&nbsp;
+        <button type="submit" [disabled]
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div> -->
+  
+ 
+
+  <div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="name"><b>Title</b></label>
+          <input type="text" [(ngModel)]="user.title" 
+            class="form-control" 
+            id="title" 
+            name="title" 
+            placeholder="Enter your title"
+            required #title="ngModel">
+        </div>
+        
+        <div class="form-group">
+          <label for="email"><b>Description</b></label>
+          <textarea rows="4" cols="50" id="link" name="link"  [(ngModel)]="user.link" 
+            class="form-control"  
+            placeholder="Enter your email address"
+            required #link="ngModel"></textarea>
+            
+          
+        </div>
+        <button type="submit" [disabled]="!userForm.form.valid" 
+        class="btn btn-info">Save Draft</button>
+        &nbsp;&nbsp;
+        <button type="submit" [disabled]="!userForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
